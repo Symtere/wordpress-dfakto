@@ -1,0 +1,220 @@
+@mixin variation-form-label() {
+    display: block;
+    color: $body-color;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.single-product {
+
+    .entry-summary > .price,
+    .product_meta {
+        display: none;
+    }
+    .woocommerce-Price-currencySymbol {
+
+        &:before {
+            content: '\00a0';
+        }
+    }
+    .single_add_to_cart_button {
+        margin-top: 1.5rem $imp;
+    }
+
+    .related.products {
+        clear: both;
+    }
+    .woocommerce-product-gallery {
+
+        .flex-viewport {
+            //padding-right: 1px;
+        }
+    }
+
+    div.product div.images .flex-control-thumbs {
+        float: none $imp;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 89px;
+            height: 89px;
+            margin: 1px 0;
+        }
+    }
+}
+
+.single-product-form {
+    position: relative;
+
+    &.loading {
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #fff;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: 125px 50% $main-loader no-repeat;
+            background-size: 40px;
+        }
+    }
+}
+
+.variations_form {
+
+    .variations {
+        margin-bottom: 0 $imp;
+
+        table,
+        tr,
+        td {
+            display: block;
+        }
+
+        tr {
+            margin-bottom: .5rem;
+        }
+
+        .form-select {
+            max-width: 310px $imp;
+            min-width: inherit $imp;
+            font-size: .85rem;
+            border-radius: 0 $imp;
+        }
+
+        label {
+            font-size: .9rem;
+        }
+        td.label {
+            color: #000;
+        }
+
+        .reset_variations {
+            display: flex;
+            margin-top: 1rem;
+        }
+    }
+
+    .single_variation_wrap {
+
+        .woocommerce-variation.single_variation {
+            display: block $imp;
+            height: auto $imp;
+        }
+
+        .woocommerce-variation-price {
+            margin-top: .5rem;
+
+            .price {
+
+                &:before {
+                    content: 'Prix';
+                    @include variation-form-label();
+                }
+            }
+        }
+    }
+}
+
+@mixin display-qty-label() {
+
+    label {
+        opacity: 1;
+        position: static $imp;
+        height: auto;
+        clip-path: inherit;
+        width: auto;
+        line-height: 2em;
+        @include variation-form-label();
+
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+.woocommerce div.product form.cart div.quantity {
+    float: none $imp;
+    @include display-qty-label();
+}
+.single_add_to_cart_button {
+    float: none $imp;
+}
+
+@media (max-width: $screen-xl-max) {
+
+    .single-product {
+
+        div.product div.images .flex-control-thumbs {
+
+            li {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+@media (max-width: $screen-lg-max) {
+
+    .single-product {
+
+        div.product div.images .flex-control-thumbs {
+
+            li {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+}
+@media (max-width: $screen-md-max ) {
+
+    .single-product {
+
+        .single-product-form {
+
+            .variations {
+
+                .form-select {
+                    max-width: 100% $imp;
+                    margin-right: 0;
+                }
+            }
+        }
+        .single_variation_wrap {
+
+            .single_add_to_cart_button {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                float: none $imp;
+            }
+        }
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .single-product {
+
+        div.product div.images .flex-control-thumbs {
+
+            li {
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+}

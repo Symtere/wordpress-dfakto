@@ -1,0 +1,49 @@
+.weglot-switch {
+
+    label .wglanguage-name {
+        opacity: .3;
+        pointer-events: none;
+    }
+
+    .weglot-flags.flag-3 a:before,
+    .weglot-flags.flag-3 span:before {
+        width: 31px $imp;
+        height: 31px $imp;
+        background-size: auto 31px $imp;
+        margin-right: 0;
+    }
+    .weglot-flags.flag-3.en>a:before,
+    .weglot-flags.flag-3.en>span:before {
+        background-image: url(//cdn.weglot.com/flags/circle/gb.svg);
+        background-position: unset $imp;
+        //background-position: -3255px 0 $imp; // (31/24)*-2760
+    }
+    .weglot-flags.flag-3.fr>a:before,
+    .weglot-flags.flag-3.fr>span:before {
+        //background-position: -3565px 0 $imp; // (31/24)*-2520
+        background-image: url(//cdn.weglot.com/flags/circle/fr.svg);
+        background-position: unset $imp;
+    }
+
+    &.country-selector {
+
+        a {
+            padding: 0;
+
+            &:before {
+                transform: rotate(0);
+                transition: .35s ease-in-out;
+            }
+
+            &:hover:before {
+                transform: rotate(1turn);
+            }
+        }
+        &.weglot-inline {
+
+            li {
+                margin: 0 0 0 .5rem;
+            }
+        }
+    }
+}

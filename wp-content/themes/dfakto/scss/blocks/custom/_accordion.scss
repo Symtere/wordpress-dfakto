@@ -1,0 +1,113 @@
+.accordion-section {
+    padding: 1rem 0 0;
+
+    .accordion-button {
+        font-size: rem(18px);
+
+        &:after {
+            opacity: .4;
+        }
+
+        &.collapsed {
+            //background-color: #ebebeb;
+
+            &:focus {
+
+            }
+        }
+    }
+}
+
+.accordion-item {
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 4px 15px rgba(158, 189, 218, 0.25);
+    background-color: $accordion-button-bg;
+    overflow: hidden;
+}
+
+.ai-header {
+    align-items: center;
+}
+.ai-header-nb {
+    position: relative;
+    min-width: 60px;
+    padding-right: 1rem;
+    line-height: 1;
+    font-weight: 900;
+    color: rgba(#fff,.2);
+
+    span {
+        font-size: 2.4rem;
+        opacity: 0;
+    }
+
+    &:before {
+        content: attr(data-number);
+        position: absolute;
+        top: -44px;
+        left: -34px;
+        font-size: 6.5rem;
+    }
+}
+.ai-header-content {
+    line-height: 1;
+}
+.ai-header-title {
+    font-weight: 600;
+
+    //font-size: 1.2rem;
+}
+.ai-header-subtitle {
+    display: block;
+    font-weight: 300;
+}
+
+.ai-content {
+    background-color: $accordion-button-bg;
+    font-size: .85rem;
+
+    &, a {
+        color: #fff;
+    }
+
+    h3, h4, h5 {
+        margin: 1.5rem 0 .5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+    }
+}
+
+
+@media (min-width: $screen-lg) {
+
+    .ai-content {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+@media (min-width: $screen-xl) {
+
+    .accordion-button {
+        padding: 1.5rem 2.5rem;
+    }
+    .ai-content {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (max-width: $screen-xl-max) {
+
+    .ai-header-nb {
+
+        &:before {
+            top: -30px;
+            left: -15px;
+            font-size: 5rem;
+        }
+    }
+}
+@media (max-width: $screen-md-max) {
+
+}

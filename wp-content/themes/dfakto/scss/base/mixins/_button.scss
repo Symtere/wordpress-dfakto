@@ -1,0 +1,92 @@
+@mixin make-button() {
+    display: inline-block;
+    padding: $btn-padding-y $btn-padding-x $imp;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    font-weight: $btn-font-weight;
+    font-size: $btn-font-size;
+    border: $btn-border-width solid transparent;
+    vertical-align: middle;
+    text-decoration: none $imp;
+    transition: $btn-transition;
+}
+@mixin make-button-underlined() {
+    padding-left: 0 $imp;
+    padding-right: 0 $imp;
+    padding-bottom: .25rem !important;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    transition: color .75s, border .5s;
+    box-shadow: none $imp;
+}
+
+
+//== bg
+@mixin make-primary-button() {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+        background-color: #fff;
+        color: $primary;
+    }
+}
+@mixin make-dark-button() {
+    background-color: $dark;
+    border-color: $dark;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+        background-color: #fff;
+        color: $dark
+    }
+}
+@mixin make-white-button() {
+    background-color: #fff;
+    border-color: #fff;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: #fff;
+    }
+}
+
+//== Outline
+@mixin make-outline-primary-button() {
+    background-color: #fff;
+    border-color: $primary;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+@mixin make-outline-dark-button() {
+    background-color: #fff;
+    border-color: $dark;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+        background-color: $dark;
+        color: #fff;
+    }
+}
+@mixin make-outline-white-button() {
+    background-color: $primary;
+    border-color: #fff;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+        background-color: #fff;
+        color: $primary;
+    }
+}

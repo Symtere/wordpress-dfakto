@@ -1,0 +1,11 @@
+//== Gutenberg back office stylesheet
+
+@import 'base/variables';
+@import 'base/mixins/all';
+
+@import 'librairies/bootstrap/functions';
+@import 'librairies/bootstrap/variables';
+@import 'librairies/bootstrap/mixins';
+
+@import 'components/site-colors'; // Colors palettes
+@import 'editor/all'; // Custom style (buttons, general, etc ..)

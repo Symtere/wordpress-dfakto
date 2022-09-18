@@ -1,0 +1,38 @@
+.wp-block-button__link {
+    border-radius: 6px;
+    font-size: 1rem;
+    //background-color: #fff;
+    //border: 1px solid $black-600;
+    //color: $black-600 $imp;
+    transition: .35s;
+
+    .wp-block-cover & {
+        //border-color: #fff;
+
+         &:hover {
+            //color: $primary $imp;
+            //border-color: #fff;
+        }
+    }
+
+    &:hover {
+        //color: $primary $imp;
+        //border-color: $primary;
+    }
+}
+
+
+@media (max-width: $screen-md-max) {
+
+    .wp-block-button__link,
+    .btn {
+        font-size: .85rem;
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .wp-block-button__link,
+    .btn {
+        padding: .5rem 1rem;
+    }
+}

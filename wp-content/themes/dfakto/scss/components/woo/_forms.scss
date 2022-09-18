@@ -1,0 +1,203 @@
+.woocommerce {
+
+    .input-text {
+
+        &.qty.text {
+            @extend .form-control;
+            display: inline-block;
+            width: 4.2em;
+            padding-right: .5rem;
+            padding-left: .25rem;
+            border-radius: 0;
+            //border: 1px solid $input-border-color;
+        }
+    }
+    .form-row {
+
+        input[type="radio"].form-check-input {
+            margin-top: 0.45em;
+        }
+        input[type="checkbox"].form-check-input {
+            margin-top: .15em;
+        }
+        input[name="terms"].form-check-input {
+            margin-top: 0.4em;
+        }
+        input[type="checkbox"].form-check-input#createaccount {
+            margin: 0.45em 0 0 -1.5em;
+        }
+        textarea[name="order_comments"] {
+            min-height: 160px;
+
+            &:focus {
+                color: $input-focus-color;
+                background-color: $input-focus-bg;
+                border-color: $input-focus-border-color;
+                outline: 0;
+
+                @if $enable-shadows {
+                    @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+                } @else {
+                    // Avoid using mixin so we can pass custom focus shadow properly
+                    box-shadow: $input-focus-box-shadow;
+                }
+            }
+        }
+    }
+
+    .form-check-payment {
+
+        input[type="radio"].form-check-input {
+            margin: 0.45em 0 0 -1.5em $imp;
+        }
+    }
+
+    .woocommerce-invalid #terms {
+        box-shadow: 0 0 0 0.25rem rgba($danger,.25);
+        outline: 0 $imp;
+    }
+
+    .form-check-label {
+        color: $secondary;
+    }
+
+    //form .form-row,
+    form {
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-row {
+
+            > label {
+                color: $secondary;
+                font-weight: bold;
+            }
+            input.form-control {
+                height: 46px;
+            }
+            textarea {
+                @include box-shadow($input-box-shadow);
+            }
+            .form-check:not(.woocommerce-invalid) label {
+                //color: $body-color;
+            }
+        }
+
+        &.checkout_coupon,
+        &.login,
+        &.register {
+            //border-color: #e3e2e3;
+            border: 0;
+            border-radius: 0;
+        }
+        &.login {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.woocommerce-account {
+
+    .woocommerce-form-login {
+
+        .form-check {
+            margin-bottom: 1rem;
+        }
+    }
+}
+.woocommerce {
+
+    .woocommerce-form-login {
+
+        .woocommerce-form-login__rememberme {
+            line-height: 1.46;
+        }
+    }
+    form.lost_reset_password {
+        margin-bottom: 3rem;
+        max-width: 648px;
+        padding: 20px;
+        border: 1px solid $input-border-color;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+
+        .woocommerce-form-row {
+            float: none $imp;
+            width: auto;
+            padding: 0;
+            margin-bottom: 1.5rem;
+
+            input[type="text"] {
+                width: 100%;;
+            }
+        }
+    }
+}
+
+.woocommerce-form-login-toggle {
+
+    .woocommerce-info {
+        margin-bottom: 0 $imp;
+    }
+    + .woocommerce-form {
+        margin-top: 0 $imp;
+    }
+    ~ .woocommerce-checkout {
+        margin-top: 2rem;
+    }
+}
+
+.woocommerce-password-strength {
+    margin-top: 3px;
+    background-color: $danger;
+    color: #fff;
+    font-weight: 400;
+    font-size: .85rem;
+    border-radius: $input-border-radius;
+
+    &.short,
+    &.bad {
+        background-color: $danger;
+        color: #fff;
+    }
+    &.strong {
+        background-color: $success;
+    }
+}
+.woocommerce-password-hint {
+    padding: .25rem .5rem;
+    margin-top: 2px;
+    // background-color: #3cb2f1;
+    color: #fff $imp;
+    background-color: $secondary;
+    //color: $primary $imp;
+    font-size: .8rem;
+    line-height: 1.2;
+    border-radius: $input-border-radius;
+}
+
+.woocommerce-cart-form {
+
+    .product-name {
+
+        .variation {
+
+            p {
+                line-height: inherit;
+            }
+        }
+    }
+}
+
+.woocommerce-checkout-payment {
+    margin-bottom: 2rem;
+    background-color: transparent $imp;
+    border-radius: 0 $imp;
+
+    .form-row.place-order {
+        padding: 0 $imp;
+    }
+}

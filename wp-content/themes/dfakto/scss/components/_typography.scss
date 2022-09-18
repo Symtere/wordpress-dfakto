@@ -1,0 +1,52 @@
+mark, .mark {
+    padding: 0;
+}
+
+@media (max-width: $screen-lg-max) {
+
+    h1, .h1 {
+        font-size: rem(46px);
+    }
+    h2, .h2 {
+        font-size: rem(34px);
+    }
+    h3, .h3 {
+        font-size: rem(24px);
+    }
+}
+@media (max-width: $screen-md-max) {
+
+    h1, .h1 {
+        font-size: rem(36px);
+    }
+    h2, .h2 {
+        font-size: rem(32px);
+    }
+    h3, .h3 {
+        font-size: rem(24px);
+    }
+    h4, .h4 {
+        font-size: rem(20px);
+    }
+    h5, .h5 {
+        font-size: rem(18px);
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    h1, .h1 {
+        font-size: rem(30px);
+    }
+    h2, .h2 {
+        font-size: rem(26px);
+    }
+    h3, .h3 {
+        font-size: rem(22px);
+    }
+    h4, .h4 {
+        font-size: rem(18px);
+    }
+    h5, .h5 {
+        font-size: 1rem;
+    }
+}

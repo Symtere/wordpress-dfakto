@@ -1,0 +1,51 @@
+.gm-style {
+    font-family: $font-family-sans-serif;
+
+    .gm-style-iw-c {
+        padding: 15px 10px 5px $imp;
+        background: $primary;
+        color:#fff;
+    }
+    .gm-style-iw-tc::after {
+        background: $primary;
+        box-shadow: -2px 2px 2px 0 rgb(96 96 96 / 40%);
+    }
+}
+.gm-style-iw-d {
+    overflow: auto $imp;
+    min-width: 220px;
+    text-align: center;
+}
+button.gm-ui-hover-effect {
+    right: 0 $imp;
+
+    img {
+        width: 20px $imp;
+        height: 20px $imp;
+        filter: invert(95%) sepia(100%) saturate(12%) hue-rotate(223deg) brightness(103%) contrast(103%);
+    }
+}
+
+.ib-title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ib-content {
+   margin-bottom: 10px;
+   font-size: .9rem;
+}
+.ib-phone {
+    margin-bottom: 10px;
+    font-size: .95rem;
+
+    a {
+        color:#fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

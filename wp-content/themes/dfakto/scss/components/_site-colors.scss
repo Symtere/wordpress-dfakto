@@ -1,0 +1,39 @@
+@function check-colorname($colorname) {
+
+    @if ( $colorname == 'default' ) { // Since gutenberg 12.8.0, #fff => white => has-white-color
+        @return '';
+    }
+    @else {
+        @return $colorname + "-";
+    }
+}
+
+
+@each $colorname, $palette in $gutenberg-palettes {
+
+    @each $skill, $color in $palette {
+
+        // $classname: $colorname + "-" + $skill;
+        $classname: check-colorname($colorname) + $skill;
+
+        .has-#{$classname}-background-color {
+            background-color: $color;
+        }
+        .has-#{$classname}-color {
+
+            &, .wp-block-button__link & {
+                color: $color;
+            }
+        }
+        .bg-#{$classname} {
+            background-color: $color;
+        }
+        .text-#{$classname} {
+            color: $color;
+        }
+    }
+}
+
+// .has-blue-black-gradient-background {
+//     background: linear-gradient(52deg, rgba(9, 13, 43, 1) 0%, rgba(0, 0, 0, 1) 100%);
+// }

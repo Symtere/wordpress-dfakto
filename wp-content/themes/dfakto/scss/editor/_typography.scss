@@ -1,0 +1,47 @@
+body .editor-styles-wrapper {
+    //font-family: $ff-open $imp;
+}
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5 {
+    //font-family: $ff-lato $imp;
+}
+
+
+.text-end {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+//== Rounded Images
+
+/*
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img,
+.wp-block-image .is-style-rounded img {
+    border-radius: 8px;
+}
+*/
+
+//== Columns
+
+/*
+.group-services .wp-block-columns {
+    flex-wrap: wrap !important;
+}
+.group-services .wp-block-columns {
+    gap: 1rem;
+}
+.group-services .wp-block-column {
+    flex: 0 0 auto;
+    width: 30%;
+}
+.group-services .wp-block-column {
+    flex-basis: auto !important;
+    flex-grow: inherit !important;
+}
+*/

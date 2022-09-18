@@ -1,0 +1,46 @@
+#footer {
+    padding: 1rem 0 0;
+    margin: 1.5rem 0 0;
+    background: #fff;
+    box-shadow: 0 0 60px rgba(#000,.15);
+}
+
+.sub-footer {
+    padding: 1rem 0;
+    font-size: rem(12px);
+}
+
+.ft-copyright {
+
+}
+
+
+.ft-brand-desc {
+
+}
+.ftb-name {
+
+}
+.ftb-address {
+
+}
+.ftb-phone {
+
+}
+.ftb-email {
+
+}
+
+@media (max-width: $screen-md-max) {
+
+    .sup-footer {
+        text-align: center;
+    }
+    .sub-footer {
+        text-align: center;
+    }
+    .ft-copyright {
+        margin-bottom: .5rem;
+        justify-content: center;
+    }
+}

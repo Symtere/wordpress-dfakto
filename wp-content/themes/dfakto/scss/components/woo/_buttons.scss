@@ -1,0 +1,61 @@
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    padding: $btn-padding-y $btn-padding-x $imp;
+    background-color: $primary $imp;
+    border: $btn-border-width solid $primary $imp;
+    font-size: 1rem;
+    transition: .35s;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        background-color: #fff $imp;
+        border-color: $primary $imp;
+        color: $primary $imp;
+        opacity: 1 $imp;
+    }
+}
+
+.woocommerce button[type=submit].btn-primary:disabled,
+.woocommerce button.disabled[type=submit].btn-primary {
+    color: $btn-primary-color-disabled;
+}
+
+.woocommerce {
+
+    .button.wc-backward,
+    .button.wc-forward {
+        @include make-button();
+    }
+
+    .button.wc-backward {
+        @include make-secondary-button();
+        background-color: #f7f6f7 $imp;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary $imp;
+        }
+    }
+    .button.wc-forward {
+        @include make-outline-primary-button();
+    }
+
+    .return-to-shop {
+        margin-bottom: 3rem;
+    }
+
+    button[type="submit"].btn-primary  {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    @include make-button();
+}

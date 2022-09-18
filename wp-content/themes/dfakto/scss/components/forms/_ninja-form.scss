@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Ninja form :: Global
+   ========================================================================== */
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input:not([type=button]),
+.nf-form-content textarea {
+    color: $body-color $imp;
+}
+
+.nf-element {
+
+    &:not(input[type="button"]) {
+        background-color: $input-bg $imp;
+        border-radius: $border-radius $imp;
+        border-color: $input-border-color $imp;
+        //font-family: $ff-open;
+        font-size: .85rem;
+        font-weight: 600;
+    }
+    &::placeholder {
+        //color: #667085;
+    }
+}
+
+.nf-form-content {
+    padding-left: 0 $imp;
+    padding-right: 0 $imp;
+
+    label {
+        font-size: .85rem $imp;
+        font-weight: 500 $imp;
+        color: #344054 $imp;
+    }
+
+    .list-select-wrap {
+
+        > div div {
+            z-index: inherit;
+        }
+        div:after {
+            color: $primary $imp;
+        }
+    }
+}
+
+.nf-form-fields-required {
+    font-size: .85rem $imp;
+    font-weight: 600;
+    color: #344054 $imp;
+}
+
+.nf-form-title {
+
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary;
+    }
+}
+
+.nf-row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.nf-after-form-content,
+.nf-before-form-content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nf-before-form-content {
+    margin-bottom: 1rem;
+}
+.nf-after-form-content {
+    margin-bottom: 2rem;
+}
+
+.field-wrap .nf-field-element:after {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    height: 44px $imp;
+    line-height: 48px $imp;
+
+    &.nf-error {
+        width: 44px $imp;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+}
+
+.nf-error-msg {
+    font-size: .85rem $imp;
+
+    &.nf-error-required-error {
+
+    }
+}
+
+.nf-form-content .listselect-wrap .nf-field-element div,
+.nf-form-content input.ninja-forms-field,
+.nf-form-content select.ninja-forms-field:not([multiple]) {
+    height: 46px $imp;
+}
+
+input[type="button"].nf-element,
+button[type="button"].nf-element {
+    padding-left: 1.5rem $imp;
+    padding-right: 1.5rem $imp;
+    cursor: pointer;
+    border-radius: $border-radius $imp;
+    text-transform: uppercase;
+}
+input[type="button"].nf-element {
+    background-color: $primary $imp;
+    color: #fff $imp;
+
+    &:hover {
+        background-color: lighten($primary,10%) $imp;
+    }
+}
+
+.field-wrap.submit-wrap .nf-field-element {
+    margin-top: 1rem;
+    text-align: right;
+
+    input[type="button"].nf-element {
+        min-width: 160px;
+        padding-left: 1.5rem $imp;
+        padding-right: 1.5rem $imp;
+        background-color: $primary $imp;
+        cursor: pointer;
+        color: #fff $imp;
+        border-radius: 0 $imp;
+
+        &:hover {
+            background-color: lighten($primary,10%) $imp;
+        }
+    }
+}
+
+button[type="button"].nf-fu-fileinput-button {
+    position: relative;
+    width: 100% $imp;
+    padding-top: 2.5rem $imp;
+    padding-bottom: 2.5rem $imp;
+    font-size: .85rem $imp;
+    border-radius: $border-radius $imp;
+    background-color: $input-bg $imp;
+    border: 1px solid $input-bg $imp;
+    color: $input-color $imp;
+    text-transform: none;
+    transition: .5s;
+
+    &:before {
+        content: '';
+        width: calc(100% - 1.25rem);
+        height: calc(100% - 1.25rem);
+        border: 2px dashed #d5d5d5;
+        position: absolute;
+        top: .625rem;
+        left: .625rem;
+    }
+
+    &:hover {
+        background-color: $primary $imp;
+        border-color: $primary $imp;
+        color: #fff $imp;
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgb(44, 44, 44);
+    }
+
+}
+.nf-fu-progress {
+    display: none;
+}
+.nf-fu-button-cancel {
+    margin-top: .5rem;
+    padding-top: .5rem $imp;
+    padding-bottom: .4rem $imp;
+    font-size: .85rem $imp;
+    background-color: #fff $imp;
+    border-radius: $border-radius $imp;
+    border: 1px solid $danger $imp;
+    color: $danger $imp;
+
+    &:hover {
+        background-color: lighten($danger,10%) $imp;
+        color: #fff $imp;
+    }
+}
+
+
+.files_uploaded {
+
+    p {
+        margin-top: .5rem;
+    }
+    .delete {
+        display: inline-block;
+        position: relative;
+        top: -4px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        font-size: 0;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: $ff-fa;
+        font-style: normal;
+        font-weight: 300;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-decoration: none $imp;
+        border: 1px solid $danger;
+        color: $danger;
+        border-radius: 50%;
+        transition: .35s;
+
+        &:before {
+            font-size: 1rem;
+            position: relative;
+            top: 4px;
+            content: "\f00d";
+        }
+
+        &:hover {
+            background: $danger;
+            color: #fff;
+        }
+    }
+}
+
+.nf-form-cont {
+
+    .g-recaptcha {
+        float: left;
+    }
+    .recaptcha-container {
+        margin-bottom: 0;
+
+        .nf-field-label {
+            display: none;
+        }
+    }
+    .nf-response-msg {
+
+        .success-message {
+            position: relative;
+
+            &:before {
+                margin-bottom: 1rem;
+                @include fa-pseudo-element-content('\f058');
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                margin-top: 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.nf-response-msg {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+
+    .alert-success {
+        padding: 1.5rem;
+        background-color: $primary;
+        color: #fff;
+        border-radius: 0;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nf-progress-container,
+.nf-progress {
+    height: 11px $imp;
+    border-radius: 10px $imp;
+}
+.nf-progress-container {
+    margin-bottom: 2.5rem;
+    background: #ECECEC $imp;
+}
+.nf-progress {
+    background: $primary $imp;
+}
+
+//== Multipart form
+// replace `xxx____classname___xxx-form` by your className form
+/*
+.xxx____classname___xxx-form {
+
+    .nf-mp-header {
+
+        h3 {
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+        }
+    }
+    input[type="button"] {
+        background-color: #fff $imp;
+        padding-left: 0 $imp;
+        padding-right: 0 $imp;
+        color: $primary $imp;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .nf-next-item,
+    .nf-previous-item {
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: $primary;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .nf-next-item {
+
+        &:after {
+            right: 0;
+        }
+    }
+    .nf-previous-item {
+
+        &:after {
+            left: 0;
+        }
+    }
+}
+*/
+
+.invisible-sep {
+    margin-bottom: 2rem $imp;
+
+    hr {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: $screen-sm-max) {
+
+    .nf-form-cont {
+
+        .g-recaptcha {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9); transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+        }
+    }
+}

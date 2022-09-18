@@ -1,0 +1,45 @@
+{
+    "name": "acme/dfakto",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.12.3",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=MDBmNGNmODIxZWQ4OWYwZGViOGUzZWVhYmY1NDg1MjkyMDZlM2MwNGU5YzI0YmIyY2NkOTE0&t=5.12.3"
+                }
+            }
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/svg-support": ">=2.4.2","wpackagist-plugin/admin-taxonomy-filter": ">=1.0.2","wpackagist-plugin/gutenberg": ">=13.7.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ],
+            "wordpress-install-dir": "."
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.alignwide, .alignfull {
+    width:  100vw;
+    max-width:  100vw;
+    margin-left:  calc(50% - 50vw);
+}
+.container,
+.no-page-banner-first {
+
+    .wp-block-group.alignfull {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        > .wp-block-group__inner-container {
+            max-width: map-get($container-max-widths,'xxl');
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 12px;
+            padding-right: 12px;
+            //@extend .container !optional;
+        }
+    }
+}
+
+//== Global padding for all blocks groups
+.main-container {
+
+    > .no-page-banner-first > .wp-block-group,
+    > .wp-block-group {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width: $screen-md) {
+
+    .wp-block-group {
+
+        &.has-background {
+            // padding-top: 3rem;
+            // padding-bottom: 2rem;
+        }
+    }
+    .main-container {
+
+        > .no-page-banner-first > .wp-block-group,
+        > .wp-block-group {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+}
+@media (min-width: $screen-lg) {
+
+    .main-container {
+
+        > .no-page-banner-first > .wp-block-group,
+        > .wp-block-group {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+}
+
+
+@media (max-width: $screen-xl-max) {
+
+    .container {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+
+        > .wp-block-group.alignfull {
+            padding-left: .75rem;
+            padding-right: .75rem;
+            // padding-left: 9px;
+            // padding-right: 9px;
+        }
+    }
+}

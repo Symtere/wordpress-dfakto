@@ -1,0 +1,32 @@
+.share-this-list {
+    display: flex;
+    //justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    > span {
+        margin-right: .5rem;
+        font-weight: 700;
+    }
+
+    .stl-btn {
+        padding: 0 8px;
+        margin-left: 12px;
+        height: 30px;
+        min-width: 31px;
+        line-height: 31px;
+        text-align: center;
+        background-color: $primary;
+        border-radius: 0;
+        cursor: pointer;
+        transition: .35s;
+
+        &:hover {
+            background: $secondary;
+        }
+
+        i {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@keyframes fade-in {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes fade-out {
+    100% { opacity: 0 }
+    0% { opacity: 1 }
+}
+
+@keyframes dark-loading {
+    0% {
+        background-color: rgba($dark,.1);
+    }
+    50% {
+        background-color: rgba($dark,.3);
+    }
+    100% {
+        background-color: rgba($dark,.5);
+    }
+}
+@keyframes gray-loading {
+    0% {
+        background-color: rgba($gray-loading-bg,.1);
+    }
+    50% {
+        background-color: rgba($gray-loading-bg,.3);
+    }
+    100% {
+        background-color: rgba($gray-loading-bg,.5);
+    }
+}
+@keyframes primary-loading {
+    0% {
+        background-color: rgba($primary,.1);
+    }
+    100% {
+        background-color: rgba($primary,.35);
+    }
+}
+@keyframes primary-light-loading {
+    0% {
+        background-color: rgba($primary,.05);
+    }
+    100% {
+        background-color: rgba($primary,.1);
+    }
+}
+
+.primary-loading {
+    animation: primary-loading 1s linear infinite alternate;
+}
+.primary-light-loading {
+    animation: primary-light-loading 1s linear infinite alternate;
+}
+.gray-loading {
+    animation: gray-loading 1.2s linear infinite alternate;
+}
+.dark-loading {
+    animation: dark-loading 1s linear infinite alternate;
+}

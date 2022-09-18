@@ -1,0 +1,16 @@
+#c-map {
+    width: 100%;
+    height: 480px;
+}
+
+.contact-map-group {
+    padding-left: 0 $imp;
+    padding-right: 0 $imp;
+    padding-bottom: 0 $imp;
+
+    > .wp-block-group__inner-container {
+        max-width: 100% $imp;
+        padding-left: 0 $imp;
+        padding-right: 0 $imp;
+    }
+}

@@ -1,0 +1,30 @@
+.woocommerce {
+    position: relative;
+
+    .cart_totals {
+
+        .blockUI.blockOverlay::before {
+            content: none;
+        }
+    }
+    .woocommerce-cart-form {
+
+        &.processing {
+            position: static $imp;
+        }
+    }
+
+    .blockUI.blockOverlay {
+
+        &:before {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: 50% $main-loader no-repeat; //rgba(#fff,.8)
+            background-size: 40px;
+            animation: none;
+        }
+    }
+}
+

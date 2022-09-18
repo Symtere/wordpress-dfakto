@@ -1,0 +1,61 @@
+.app-search-form {
+    position: relative;
+    margin-bottom: 1.5rem;
+    //box-shadow: $box-shadow-sm;
+
+    .btn {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $input-height;
+        width: $input-height;
+        border: 1px solid $primary;
+        border-left: 0 $imp;
+        font-size: 1rem $imp;
+        background-color: transparent;
+        color: $primary;
+        @include border-end-radius($input-border-radius);
+
+        &:hover,
+        &:focus {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+    input {
+        padding-right: 2.2rem;
+        border-color: $primary;
+
+        &::placeholder {
+            color: $primary;
+        }
+
+        &:focus {
+
+            + .btn {
+                border-color: transparent;
+            }
+        }
+
+        &::-webkit-search-cancel-button {
+            position: relative;
+            right: -.25rem;
+            top: 0;
+            width: 1.3rem;
+            height: 1.3rem;
+            -webkit-appearance: none;
+            background-image: svg-url('xmark-primary.svg');
+            background-size: 65%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &:hover {
+                background-image: svg-url('xmark.svg');
+            }
+        }
+    }
+}

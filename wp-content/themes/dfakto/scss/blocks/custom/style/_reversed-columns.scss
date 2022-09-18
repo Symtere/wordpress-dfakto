@@ -1,0 +1,34 @@
+@media (max-width: $screen-wp-md-max) {
+
+    .is-style-reversed-columns-md {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap $imp;
+
+        .wp-block-image {
+            margin-bottom: 0;
+
+            .alignright {
+                float: none;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .is-style-reversed-columns-sm {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap $imp;
+
+        .wp-block-image {
+            margin-bottom: 0;
+
+            .alignright {
+                float: none;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}

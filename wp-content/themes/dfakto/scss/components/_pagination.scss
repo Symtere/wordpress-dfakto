@@ -1,0 +1,173 @@
+.pagination {
+    display: block;
+    padding-bottom: 2rem;
+
+    .nav-links-container {
+        display: flex;
+        align-items: center;
+
+        > a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none $imp;
+            height: 40px;
+            margin: 0 2px;
+            padding: .25rem 0;
+            //font-weight: 700;
+            color: $pagination-item-color $imp;
+            border-radius: $pagination-border-radius;
+
+            i {
+                position: relative;
+                top: 1px;
+            }
+
+            &:hover {
+                opacity: .8;
+            }
+            &.disabled {
+                pointer-events: none;
+                opacity: .5;
+            }
+        }
+        .prev {
+            margin-right: auto;
+
+            i {
+                margin-right: .6rem;
+            }
+        }
+        .next {
+            margin-left: auto;
+
+            i {
+                margin-left: .6rem;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+
+        a, > span {
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 2px;
+            padding: .25rem;
+            background-color: $pagination-item-bg;
+            text-decoration: none $imp;
+            color: $pagination-item-color;
+            border: 1px solid $pagination-item-border-color;
+            border-radius: $pagination-border-radius;
+            transition: .35s;
+        }
+        > span.dots {
+            background-color: $pagination-item-dots-bg;
+            color: $pagination-item-dots-color;
+        }
+
+        a:hover {
+            background-color: $pagination-item-bg-hover $imp;
+            color: $pagination-item-color-hover $imp;
+        }
+
+        a.current,
+        span.current {
+            background-color: $pagination-item-bg-active;
+            color: $pagination-item-color-active;
+        }
+        // a {
+
+        //     &.prev,
+        //     &.next {
+        //         background-color: $pagination-item-prev-next-bg;
+        //         color: $pagination-item-prev-next-color;
+        //         border-width: $pagination-item-prev-next-border-width;
+        //     }
+        // }
+    }
+
+    .screen-reader-text {
+        display: none;
+    }
+    a, span {
+        display: inline-flex;
+    }
+
+    .prev {
+        margin-left: 0;
+    }
+    .next {
+        margin-right: 0;
+    }
+}
+
+
+.right-pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+.center-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.paginate-links {
+    margin-bottom: 2rem;
+
+    a, > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: .25rem;
+        background-color: $pagination-item-bg;
+        text-decoration: none $imp;
+        color: $pagination-item-color;
+        transition: .35s;
+    }
+    a:hover {
+        background-color: $pagination-item-bg-hover;
+        color: $pagination-item-color-hover;
+    }
+    .current {
+        background-color: $pagination-item-bg-active;
+        color: $pagination-item-color-active;
+    }
+}
+
+.single-pagination {
+    margin: 0 -4px 2rem;
+
+    div {
+        margin: 0 4px .5rem;
+    }
+}
+
+
+@media (min-width: $screen-lg) {
+
+    .pagination {
+        padding: 0 0 2.5rem;
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .nav-links-container {
+        justify-content: center;
+
+        > a {
+            display: none $imp;
+        }
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .pagination {
+        padding-bottom: 1.5rem;
+    }
+}

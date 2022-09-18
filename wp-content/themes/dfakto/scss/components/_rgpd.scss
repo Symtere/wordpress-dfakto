@@ -1,0 +1,51 @@
+.rgpd-navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.65rem 0;
+    background-color: $rgpd-bg;
+    color: #fff;
+    z-index: $zindex-fixed;
+    text-align: center;
+}
+.rgpd-content {
+    font-size: .95rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.rgpd-choices {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    > div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    > a {
+        @extend .btn !optional;
+        min-width: 120px;
+        margin-bottom: 0.75rem;
+        padding: .5rem 1.2rem;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid $rgpd-btn-bg-border-color;
+        color: $rgpd-btn-bg-color $imp;
+        font-size: .85rem;
+        font-weight: 300;
+        transition: .5s;
+
+        &:hover {
+            background-color: $rgpd-btn-bg-hover;
+            border-color: $rgpd-btn-bg-hover;
+        }
+    }
+}
+.rgpd-close {
+}
+
+.rgpd-navbar-container {
+    overflow: hidden;
+}

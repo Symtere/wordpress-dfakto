@@ -1,0 +1,194 @@
+@mixin sticky-header() {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(#000,.3);
+}
+
+.site-header {
+    // position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: $zindex-sticky;
+    background-color: transparent;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 10px rgba(#000,0);
+
+    .has-header-bg & {
+        @include sticky-header();
+        position: sticky $imp;
+    }
+
+    &.is-sticky,
+    &.on {
+        @include sticky-header();
+
+        .main-nav {
+            margin-top: 0;
+        }
+    }
+}
+
+.brand-header {
+    padding: 1rem 0;
+}
+
+.main-nav {
+    padding: 0 80px;
+    width: 100%;
+    justify-content: space-between;
+
+    > li {
+        padding-bottom: 0;
+
+        > a {
+            text-transform: uppercase;
+        }
+
+        &.active {
+            position: relative;
+
+            > .nav-link {
+                color: $header-main-nav-item-active-color;
+                font-weight: $header-main-nav-item-active-font-weight;
+            }
+
+            @if $header-main-nav-item-active-border {
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $header-main-nav-item-active-border-color;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .nav-item {
+
+        &:hover {
+
+            .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .dropdown-toggle {
+
+        &:after {
+            //content: none;
+            vertical-align: .05em;
+        }
+        &.show {
+
+            &:after {
+                opacity: .7;
+                @include caret-up();
+                border-right: .35em solid transparent;
+                border-left: .35em solid transparent;
+                border-bottom: .35em solid;
+                vertical-align: .1em;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        right: auto;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 0);
+        display: block;
+        margin-top: 0;
+        padding: 0;
+        box-shadow: $dropdown-box-shadow;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+
+        li {
+
+            + li {
+                border-top: 1px solid $dropdown-border-color;
+            }
+
+            &.active {
+
+                .dropdown-item {
+                    background-color: $dropdown-link-active-bg;
+                    color: $dropdown-link-active-color;
+                }
+            }
+        }
+    }
+    .dropdown-item {
+
+        &:hover,
+        &:focus {
+            background-color: $dropdown-link-hover-bg;
+            color: $dropdown-link-hover-color;
+        }
+    }
+}
+
+.aside-menu-toggler {
+    position: relative;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 $imp;
+    border-radius: 0 $imp;
+    outline: 0 $imp;
+    box-shadow: none $imp;
+    transition: .5s ease-in-out;
+    //background-color: #fff $imp;
+
+    span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $aside-menu-toggler;
+        border-radius: 3px;
+        transition: .25s ease-in-out;
+    }
+    &:before,
+    &:after {
+        display: block;
+        content: '';
+        margin: 7px auto;
+        height: 3px;
+        width: 26px;
+        border-radius: 3px;
+        background-color: $aside-menu-toggler;
+        transition: .25s ease-in-out;
+    }
+
+    // &:hover {
+    //     background: $header-aside-menu-toggler-bg-hover;
+
+    //     span {
+    //         background-color: $header-aside-menu-toggler-color-hover;
+    //     }
+    // }
+}
+
+
+/*
+   Responsive
+   ========================================================================== */
+
+@media (min-width: $screen-lg) {
+
+
+}

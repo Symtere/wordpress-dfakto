@@ -1,0 +1,270 @@
+$theme-version: 1.0;
+$theme-name: unquote('custom');
+
+//== Projects vars
+$img-path: 'assets/img/';
+$font-path: 'assets/fonts/';
+$svg-path: 'assets/svg/';
+$loader-path: 'assets/svg/loaders/';
+$fa-font-path: 'assets/fonts/fontawesome/webfonts/';
+
+$imp: unquote('!important');
+
+//== Bootstrap Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$screen-sm: map-get($grid-breakpoints, sm);
+$screen-md: map-get($grid-breakpoints, md);
+$screen-lg: map-get($grid-breakpoints, lg);
+$screen-xl: map-get($grid-breakpoints, xl);
+$screen-xxl: map-get($grid-breakpoints, xxl);
+
+$screen-sm-max: ($screen-sm - 1);
+$screen-md-max: ($screen-md - 1);
+$screen-lg-max: ($screen-lg - 1);
+$screen-xl-max: ($screen-xl - 1);
+$screen-xxl-max: ($screen-xxl - 1);
+
+//== Gutenberg breakpoints
+$screen-wp-sm: 601px;
+$screen-wp-md: 782px;
+
+$screen-wp-sm-max: 600px;
+$screen-wp-md-max: 781px;
+
+
+//== Colors
+
+//== Red
+$red-palette: (
+    '400': #e4282b,
+);
+$red-400: map-get($red-palette,'400');
+
+//== Blue
+$blue-palette: (
+    '800': #0060B4,
+    '400': #007cba,  // primary
+    '300': #0EB5DF,
+);
+$blue-800: map-get($blue-palette,'800');
+$blue-400: map-get($blue-palette,'400');
+$blue-300: map-get($blue-palette,'300');
+
+//== Green
+$green-palette: (
+    '400': #28e47c,
+);
+$green-400: map-get($green-palette,'400');
+
+$green-variant-palette: (
+    '500': #3b9f68,
+);
+$green-variant-500: map-get($green-variant-palette,'500');
+
+//== Orange
+$orange-palette: (
+    '600': #FFAA3B,
+);
+$orange-600: map-get($orange-palette,'600');
+
+$black-palette: (
+    '700': #142128,
+);
+$black-700: map-get($black-palette,'700');
+
+//== Back office Gutenberg palettes
+/*
+ * See wp-content/themes/custom/scss/components/_site-colors.scss
+*/
+$gutenberg-palettes: (
+    'red': (
+        '400': $red-400,
+    ),
+    'blue': (
+        '800': $blue-800,
+        '400': $blue-400,
+        '300': $blue-300,
+    ),
+    'green': (
+        '400': $green-400,
+    ),
+    'green-variant': (
+        '500': $green-variant-500,
+    ),
+    'orange': (
+        '600': $orange-600,
+    ),
+    'black': (
+        '700': $black-700,
+    ),
+    'default': (
+        'white': #fff,
+    ),
+);
+
+$header-height: 100px;
+$banner-header-offset: 70px;
+
+$body-bg: #fff;
+$body-color: #363636;
+$primary: $blue-400;
+$primary-light: #C1181B;
+$success: #45B384;
+$secondary: #e2e2e2;
+$danger: #ee4141;
+$info: $blue-400;
+$dark: #192227;
+
+$link-color: $primary;
+
+$code-bg: #192227;
+
+// CSS variables
+:root {
+    --we-map-fill-icon-color: #{$primary};
+    --we-map-stroke-icon-color: #000;
+}
+
+//== Loaders
+$main-loader: loader-url('grid.svg');
+
+
+//== Typography
+$font-family-sans-serif: 'Open Sans', Arial, sans-serif;
+$ff-fa: 'Font Awesome 5 Pro';
+
+//$headings-font-family: $font-family-sans-serif;
+//$headings-font-weight: 700;
+$headings-margin-bottom: 1.5rem;
+$h1-font-size: rem(54px);
+$h2-font-size: rem(38px);
+$h3-font-size: rem(30px);
+$h4-font-size: rem(22px);
+$h5-font-size: rem(20px);
+
+$paragraph-margin-bottom: 1.25rem;
+
+//== rgpd
+$rgpd-primary: $primary;
+$rgpd-bg: rgba($rgpd-primary, .95);
+$rgpd-btn-bg-color: #fff;
+$rgpd-btn-bg-border-color: #fff;
+$rgpd-btn-bg-hover: darken($rgpd-primary,2%);
+
+//== Svg
+//$svg-settings: svg-settings(21,21);
+
+//== Navbar
+$aside-menu-primary: $blue-400;
+$aside-menu-toggler: $aside-menu-primary;
+$dropdown-primary: $blue-400;
+
+$navbar-light-color: #000;
+$navbar-light-active-color: $blue-400;
+$navbar-light-hover-color: $navbar-light-active-color;
+
+$navbar-dark-color: #fff;
+$navbar-dark-active-color: $blue-400;
+$navbar-dark-hover-color: $blue-400;
+
+$header-main-nav-item-active-color: $blue-400;
+$header-main-nav-item-active-font-weight: 500;
+
+$header-main-nav-item-active-border: false;
+$header-main-nav-item-active-border-color: $blue-400;
+
+$header-aside-menu-toggler-bg-hover: #fff;
+$header-aside-menu-toggler-color-hover: $aside-menu-toggler;
+$header-aside-menu-toggler-bg-opened: #fff;
+$header-aside-menu-toggler-color-opened: $aside-menu-toggler;
+
+
+//== Aside menu
+$aside-menu-link-bg-color: lighten($aside-menu-primary,20%);
+$aside-menu-link-color: $aside-menu-primary;
+
+$aside-menu-dropdown-item-active-color: $aside-menu-primary;
+$aside-menu-dropdown-link-color: $aside-menu-primary;
+$aside-menu-dropdown-link-hover-bg: transparent;
+$aside-menu-dropdown-link-active-bg: transparent;
+$aside-menu-dropdown-link-active-color: $aside-menu-primary;
+$aside-menu-dropdown-link-hover-color: $aside-menu-primary;
+
+//== Dropdowns
+$dropdown-item-padding-x: .85rem;
+$dropdown-item-padding-y: .65rem;
+$dropdown-border-radius: 0;
+$dropdown-box-shadow: 0 0 1rem rgba(#000, .1);
+$dropdown-border-color: transparent;
+$dropdown-border-width: 0;
+$dropdown-link-color: $dropdown-primary;
+$dropdown-link-hover-bg: #fff;
+$dropdown-link-active-bg: #fff;
+$dropdown-link-active-color: $dropdown-primary;
+$dropdown-link-hover-color: lighten($dropdown-primary,10%);
+$dropdown-font-size: .95rem;
+
+//== Forms
+$input-bg: #fff;
+$input-border-color: #ececec;
+$input-placeholder-color: #787878;
+$input-color: $body-color;
+$input-border-radius: 0;
+
+//== Buttons
+$btn-transition: .5s;
+$btn-font-weight: 600;
+$btn-border-width: 2px;
+$btn-padding-y: .47rem;
+$btn-padding-x: 1.25rem;
+$btn-border-radius: 0;
+$btn-font-size: 1rem;
+$btn-line-height: 1.4;
+
+//== Pagination
+$pagination-primary-bg: $primary;
+$pagination-item-bg: #fff;
+$pagination-item-border-color: $primary;
+$pagination-border-radius: 0;
+$pagination-item-color: $primary;
+$pagination-item-bg-hover: $primary;
+$pagination-item-color-hover: #fff;
+$pagination-item-bg-active: $primary;
+$pagination-item-color-active: #fff;
+$pagination-item-dots-bg: $pagination-item-bg;
+$pagination-item-dots-color: $primary;
+$pagination-item-prev-next-bg: #fff;
+$pagination-item-prev-next-color: $primary;
+$pagination-item-prev-next-border-width: 0;
+
+
+//== Accordion
+$accordion-button-bg: $primary;
+$accordion-button-color: #fff;
+$accordion-button-active-bg: $accordion-button-bg;
+$accordion-border-color: #fff;
+$accordion-button-focus-box-shadow: none;
+$accordion-button-focus-box-shadow: none;
+$accordion-button-active-bg: $accordion-button-bg;
+$accordion-button-active-color: #fff;
+
+$accordion-border-width: 0;
+
+//$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+//$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$secondary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+
+//== Placeholders (Bootstrap)
+$placeholder-opacity-max: .35;
+$placeholder-opacity-min: .1;
+
+//== Skeletons (Custom)
+$gray-loading-bg: #ababab;

@@ -1,0 +1,31 @@
+{
+  "name": "wp-scaffold",
+  "version": "1.0.0",
+  "description": "wp project",
+  "scripts": {
+    "scaffold": "node scaffold/prompt.js",
+    "start": "npm-run-all --parallel serve sass",
+    "scss": "sass ./wp-content/themes/dfakto/scss/:./wp-content/themes/dfakto/ --style compressed",
+    "sass": "sass --watch ./wp-content/themes/dfakto/scss/:./wp-content/themes/dfakto/ --style compressed",
+    "watch": "nodemon -e \"./wp-content/themes/dfakto/scss/**/**/**/*.scss\" -x \"npm run scss\"",
+    "serve": "browser-sync start --proxy \"https://dfakto.local\" --files \"./wp-content/themes/dfakto/*.css\" \"./wp-content/themes/dfakto/assets/js/*.js\" \"./wp-content/themes/dfakto/**/**/*.php\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Symtere/wordpress-dfakto.git"
+  },
+  "author": "gsupiot",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "mustache": "^4.2.0",
+    "shelljs": "^0.8.4",
+    "slugify": "^1.6.2",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "latest",
+    "sass": "1.27.0"
+  }
+}

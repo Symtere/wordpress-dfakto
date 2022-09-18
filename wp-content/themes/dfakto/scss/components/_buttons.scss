@@ -1,0 +1,35 @@
+.wp-block-button__link {
+    @include make-button();
+}
+
+.is-style-btn-primary .wp-block-button__link {
+    //@include button-variant($primary, $primary, #fff, transparent, $primary,$primary);
+}
+
+//== bg
+.btn-primary,
+.is-style-btn-primary .wp-block-button__link {
+    @include make-primary-button();
+}
+.btn-dark,
+.is-style-btn-dark .wp-block-button__link {
+    @include make-dark-button();
+}
+.btn-white,
+.is-style-btn-white .wp-block-button__link {
+    @include make-white-button();
+}
+
+//== Outline
+.btn-outline-primary,
+.is-style-btn-outline-primary .wp-block-button__link {
+    @include make-outline-primary-button();
+}
+.btn-outline-dark,
+.is-style-btn-outline-dark .wp-block-button__link {
+    @include make-outline-dark-button();
+}
+.btn-outline-white,
+.is-style-btn-outline-white .wp-block-button__link {
+    @include make-outline-white-button();
+}
