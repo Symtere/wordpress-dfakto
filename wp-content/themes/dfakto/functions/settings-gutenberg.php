@@ -41,15 +41,14 @@ if (!function_exists('we_theme_gut_support')) {
         // Enqueue editor styles.
         //add_editor_style($editor_stylesheet); // see wp-content/themes/custom/functions/assets.php
 
-        $red_400 = '#e4282b';
 
-        $blue_300 = '#0EB5DF';
-        $blue_800 = '#0060B4';
+        $red_500 = '#FD7762';
 
-        $orange_600 = '#FFAA3B';
+        $blue_500 = '#26C1D9';
 
-        $green_400 = '#28e47c';
-        $green_varient_500 = '#3b9f68';
+        $black_700 = '#072038';
+
+
 
         $white_label = esc_attr('Blanc');
         $black_label = esc_attr('Noir');
@@ -70,34 +69,19 @@ if (!function_exists('we_theme_gut_support')) {
             'editor-color-palette',
             array(
                 array(
-                    'name'  => $red_label,
-                    'slug'  => 'red-400',
-                    'color' => $red_400,
-                ),
-                array(
-                    'name'  => $blue_label . $light_label,
-                    'slug'  => 'blue-300',
-                    'color' => $blue_300,
-                ),
-                array(
                     'name'  => $blue_label,
-                    'slug'  => 'blue-800',
-                    'color' => $blue_800,
+                    'slug'  => 'blue-500',
+                    'color' => $blue_500,
                 ),
                 array(
-                    'name'  => $orange_label,
-                    'slug'  => 'orange-600',
-                    'color' => $orange_600,
+                    'name'  => $red_label,
+                    'slug'  => 'red-500',
+                    'color' => $red_500,
                 ),
                 array(
-                    'name' => $green_label,
-                    'slug' => 'green-400',
-                    'color' => $green_400,
-                ),
-                array(
-                    'name'  => $green_label . $variant_label,
-                    'slug'  => 'green-variant-500',
-                    'color' => $green_varient_500,
+                    'name'  => $black_label,
+                    'slug'  => 'black-700',
+                    'color' => $black_700,
                 ),
             )
         );

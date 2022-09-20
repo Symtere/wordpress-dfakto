@@ -13,6 +13,10 @@ wp.domReady( () => {
         isDefault: true,
     });
     wp.blocks.registerBlockStyle( 'core/button', {
+        name: 'btn-secondary',
+        label: 'Secondaire',
+    });
+    wp.blocks.registerBlockStyle( 'core/button', {
         name: 'btn-dark',
         label: 'Noir',
     });

@@ -39,44 +39,68 @@ $screen-wp-md: 782px;
 $screen-wp-sm-max: 600px;
 $screen-wp-md-max: 781px;
 
+// Containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+);
+
 
 //== Colors
 
-//== Red
-$red-palette: (
-    '400': #e4282b,
-);
-$red-400: map-get($red-palette,'400');
+
 
 //== Blue
 $blue-palette: (
-    '800': #0060B4,
-    '400': #007cba,  // primary
-    '300': #0EB5DF,
+    '900': #041518,
+    '800': #0D4048,
+    '700': #156B79,
+    '600': #1D96A9,
+    '500': #26C1D9,
+    '400': #56CFE2,
+    '300': #86DDEA,
+    '200': #B6EAF2,
+    '100': #F0FDFF,
 );
+$blue-900: map-get($blue-palette,'900');
 $blue-800: map-get($blue-palette,'800');
+$blue-700: map-get($blue-palette,'700');
+$blue-600: map-get($blue-palette,'600');
+$blue-500: map-get($blue-palette,'500');
 $blue-400: map-get($blue-palette,'400');
 $blue-300: map-get($blue-palette,'300');
+$blue-200: map-get($blue-palette,'200');
+$blue-100: map-get($blue-palette,'100');
 
-//== Green
-$green-palette: (
-    '400': #28e47c,
+//== Red
+$red-palette: (
+    '900': #971521,
+    '800': #B93826,
+    '700': #BE594A,
+    '600': #E46B58,
+    '500': #FD7762,
+    '400': #FEA091,
+    '300': #FEC9C0,
+    '200': #FFDDD8,
+    '100': #FFF1EF,
 );
-$green-400: map-get($green-palette,'400');
+$red-100: map-get($red-palette,'100');
+$red-200: map-get($red-palette,'200');
+$red-300: map-get($red-palette,'300');
+$red-400: map-get($red-palette,'400');
+$red-500: map-get($red-palette,'500');
+$red-600: map-get($red-palette,'600');
+$red-700: map-get($red-palette,'700');
+$red-800: map-get($red-palette,'800');
+$red-900: map-get($red-palette,'900');
 
-$green-variant-palette: (
-    '500': #3b9f68,
-);
-$green-variant-500: map-get($green-variant-palette,'500');
-
-//== Orange
-$orange-palette: (
-    '600': #FFAA3B,
-);
-$orange-600: map-get($orange-palette,'600');
 
 $black-palette: (
-    '700': #142128,
+    '700': #072038,
 );
 $black-700: map-get($black-palette,'700');
 
@@ -86,21 +110,26 @@ $black-700: map-get($black-palette,'700');
 */
 $gutenberg-palettes: (
     'red': (
+        '900': $red-900,
+        '800': $red-800,
+        '700': $red-700,
+        '600': $red-600,
+        '500': $red-500,
         '400': $red-400,
+        '300': $red-300,
+        '200': $red-200,
+        '100': $red-100,
     ),
     'blue': (
+        '900': $blue-900,
         '800': $blue-800,
+        '700': $blue-700,
+        '600': $blue-600,
+        '500': $blue-500,
         '400': $blue-400,
         '300': $blue-300,
-    ),
-    'green': (
-        '400': $green-400,
-    ),
-    'green-variant': (
-        '500': $green-variant-500,
-    ),
-    'orange': (
-        '600': $orange-600,
+        '200': $blue-200,
+        '100': $blue-100,
     ),
     'black': (
         '700': $black-700,
@@ -114,14 +143,14 @@ $header-height: 100px;
 $banner-header-offset: 70px;
 
 $body-bg: #fff;
-$body-color: #363636;
-$primary: $blue-400;
-$primary-light: #C1181B;
+$body-color: #072038;
+$primary: $blue-500;
+$primary-light: $blue-200;
 $success: #45B384;
-$secondary: #e2e2e2;
+$secondary: $red-500;
 $danger: #ee4141;
-$info: $blue-400;
-$dark: #192227;
+$info: $blue-500;
+$dark: #072038;
 
 $link-color: $primary;
 
@@ -138,16 +167,16 @@ $main-loader: loader-url('grid.svg');
 
 
 //== Typography
-$font-family-sans-serif: 'Open Sans', Arial, sans-serif;
+$font-family-sans-serif: 'Porpora', Arial, sans-serif;
 $ff-fa: 'Font Awesome 5 Pro';
 
-//$headings-font-family: $font-family-sans-serif;
-//$headings-font-weight: 700;
+$headings-font-family: 'Outfit', Arial, sans-serif;
+$headings-font-weight: 500;
 $headings-margin-bottom: 1.5rem;
-$h1-font-size: rem(54px);
-$h2-font-size: rem(38px);
-$h3-font-size: rem(30px);
-$h4-font-size: rem(22px);
+$h1-font-size: rem(72px);
+$h2-font-size: rem(60px);
+$h3-font-size: rem(48px);
+$h4-font-size: rem(36px);
 $h5-font-size: rem(20px);
 
 $paragraph-margin-bottom: 1.25rem;
@@ -163,23 +192,23 @@ $rgpd-btn-bg-hover: darken($rgpd-primary,2%);
 //$svg-settings: svg-settings(21,21);
 
 //== Navbar
-$aside-menu-primary: $blue-400;
+$aside-menu-primary: $blue-500;
 $aside-menu-toggler: $aside-menu-primary;
-$dropdown-primary: $blue-400;
+$dropdown-primary: $blue-500;
 
 $navbar-light-color: #000;
-$navbar-light-active-color: $blue-400;
+$navbar-light-active-color: $blue-500;
 $navbar-light-hover-color: $navbar-light-active-color;
 
 $navbar-dark-color: #fff;
-$navbar-dark-active-color: $blue-400;
-$navbar-dark-hover-color: $blue-400;
+$navbar-dark-active-color: $blue-500;
+$navbar-dark-hover-color: $blue-500;
 
-$header-main-nav-item-active-color: $blue-400;
+$header-main-nav-item-active-color: $blue-500;
 $header-main-nav-item-active-font-weight: 500;
 
 $header-main-nav-item-active-border: false;
-$header-main-nav-item-active-border-color: $blue-400;
+$header-main-nav-item-active-border-color: $blue-500;
 
 $header-aside-menu-toggler-bg-hover: #fff;
 $header-aside-menu-toggler-color-hover: $aside-menu-toggler;
@@ -221,13 +250,13 @@ $input-border-radius: 0;
 
 //== Buttons
 $btn-transition: .5s;
-$btn-font-weight: 600;
+$btn-font-weight: 500;
 $btn-border-width: 2px;
-$btn-padding-y: .47rem;
-$btn-padding-x: 1.25rem;
-$btn-border-radius: 0;
+$btn-padding-y: .75rem;
+$btn-padding-x: 1rem;
+$btn-border-radius: 30px;
 $btn-font-size: 1rem;
-$btn-line-height: 1.4;
+$btn-line-height: 1;
 
 //== Pagination
 $pagination-primary-bg: $primary;

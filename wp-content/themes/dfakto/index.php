@@ -10,7 +10,6 @@
                 the_content();
             ?>
             <?php endwhile; ?>
-            <?php get_template_part( 'template-parts/ui', ''); ?>
         </div>
     </div>
 

@@ -25,12 +25,21 @@
 @mixin make-primary-button() {
     background-color: $primary;
     border-color: $primary;
-    color: #fff;
+    color: $dark;
 
     &:hover,
     &:focus {
-        background-color: #fff;
-        color: $primary;
+        padding-right: 2.5rem$imp;
+    }
+}
+@mixin make-secondary-button() {
+    background-color: $secondary;
+    border-color: $secondary;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+        padding-right: 2.5rem$imp;
     }
 }
 @mixin make-dark-button() {

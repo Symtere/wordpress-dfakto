@@ -11,6 +11,10 @@
 .is-style-btn-primary .wp-block-button__link {
     @include make-primary-button();
 }
+.btn-secondary,
+.is-style-btn-secondary .wp-block-button__link {
+    @include make-secondary-button();
+}
 .btn-dark,
 .is-style-btn-dark .wp-block-button__link {
     @include make-dark-button();
