@@ -1,0 +1,44 @@
+.testimonial-author {
+    color: $blue-500;
+}
+
+.testimonial-content {
+    color: #fff;
+}
+
+.row-testimonials {
+    i {
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        padding: 12px 13px;
+        transition: .3s;
+
+        &:hover {
+            background: #fff;
+            color: $dark;
+        }
+    }
+}
+
+
+.testimonials-arrows {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &>div {
+        margin-right: 15px;
+    }
+}
+
+.testimonials-slider-pagination span {
+    background: #A0BDC0;
+    opacity: 1;
+    border: none;
+
+    &.swiper-pagination-bullet-active {
+        width: 23px;
+        border-radius: 14px;
+    }
+}

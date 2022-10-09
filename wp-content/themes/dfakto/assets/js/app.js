@@ -1,9 +1,9 @@
 function debounce(func, wait, immediate) {
     var timeout;
 
-    return function() {
+    return function () {
         var context = this, args = arguments;
-        var later = function() {
+        var later = function () {
             timeout = null;
             if (!immediate) func.apply(context, args);
         };
@@ -22,18 +22,18 @@ window.addEventListener('wheel', debounce(function(e) {
 
 //== Close offAsideMenuCanvas on resize
 const asideMenu = document.getElementById('aside-menu');
-if ( null != asideMenu ) {
+if (null != asideMenu) {
 
     const offAsideMenuCanvas = new bootstrap.Offcanvas(asideMenu);
 
-    window.addEventListener('resize', debounce( (e) => {
+    window.addEventListener('resize', debounce((e) => {
         offAsideMenuCanvas.hide();
     }, 40));
 }
 
 //== Avoid menu close onclick inside dropdown menu
 const asideDropdown = document.querySelector('#aside-menu .dropdown-menu');
-if ( asideDropdown != null ) {
+if (asideDropdown != null) {
 
     document.querySelector('#aside-menu .dropdown-menu').addEventListener('click', (e) => {
         e.stopPropagation();
@@ -45,9 +45,9 @@ function addStickyClassToHeader() {
 
     const header = document.getElementById('header');
 
-    if ( null != header ) {
+    if (null != header) {
 
-        window.addEventListener('scroll', debounce( (e) => {
+        window.addEventListener('scroll', debounce((e) => {
 
             if (window.pageYOffset > 0) {
                 header.classList.add('is-sticky');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function exampleSlider() {
 
         const relatedProductsId = document.getElementById('related-products-slider');
-        if ( relatedProductsId != null ) {
+        if (relatedProductsId != null) {
 
             const relatedProductsSwiper = new Swiper(relatedProductsId, {
                 slidesPerView: 1.4,
@@ -117,13 +117,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function setBannerParallax() {
         const banners = document.querySelectorAll('.wp-block-cover.is-style-has-parallax');
 
-        if ( banners ) {
+        if (banners) {
 
             banners.forEach(banner => {
                 banner.classList.add('jarallax');
                 const bannerImg = banner.querySelector('.wp-block-cover__image-background');
 
-                if ( bannerImg ) {
+                if (bannerImg) {
                     bannerImg.classList.add('jarallax-img');
 
                     jarallax(banner, {
@@ -140,7 +140,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const noBannerFirst = document.querySelector('.site-main .container > .no-page-banner-first');
     const body = document.querySelector('body');
 
-    if ( null !== noBannerFirst && null !== body ) {
+    if (null !== noBannerFirst && null !== body) {
         body.classList.add('has-header-bg');
     }
+
+
+
+
+    function testimonialSlider() {
+
+        const testimonialSlider = document.querySelector('.row-testimonials');
+        if (testimonialSlider != null) {
+
+            const testimonialSliderSwiper = new Swiper(testimonialSlider, {
+                slidesPerView: 1,
+                allowTouchMove: true,
+                watchOverflow: true,
+                centeredSlidesBounds: true,
+                lazyLoading: true,
+                grabCursor: true,
+                pagination: {
+                    el: '.testimonials-slider-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.testimonials-button-next',
+                    prevEl: '.testimonials-button-prev',
+                },
+                breakpoints: {
+                    0: {
+                    },
+                    569: {
+                    },
+                    892: {
+
+                    }
+                },
+                ...swiperLoader
+            });
+        }
+    }
+    testimonialSlider();
+
+
 });
