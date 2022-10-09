@@ -50,7 +50,7 @@
                 .wp-block-cover__inner-container {
                     //@extend .container;
                     //max-width: map-get($container-max-widths,'xxl');
-                    text-align: center;
+                    // text-align: center;
                     margin-left: auto $imp;
                     margin-right: auto $imp;
                     padding-left: 9px;
@@ -72,6 +72,10 @@
         > p {
             margin-bottom: 2.5rem;
         }
+    }
+
+    &.overflow-visible {
+        overflow: visible$imp;
     }
 }
 

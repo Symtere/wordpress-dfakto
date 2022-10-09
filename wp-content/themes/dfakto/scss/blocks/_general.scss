@@ -10,7 +10,7 @@
         padding-left: 15px;
         padding-right: 15px;
 
-        > .wp-block-group__inner-container {
+        > .wp-block-group__inner-container, > :not(.alignwide):not(.alignfull)  {
             max-width: map-get($container-max-widths,'xxl');
             margin-left: auto;
             margin-right: auto;
@@ -19,6 +19,16 @@
             //@extend .container !optional;
         }
     }
+}
+
+.col-radius{
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.title-icon i {
+    color: $secondary;
+    font-size: 48px;
 }
 
 //== Global padding for all blocks groups
