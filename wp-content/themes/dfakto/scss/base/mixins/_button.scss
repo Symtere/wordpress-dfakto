@@ -10,6 +10,7 @@
     text-decoration: none $imp;
     transition: $btn-transition;
 }
+
 @mixin make-button-underlined() {
     padding-left: 0 $imp;
     padding-right: 0 $imp;
@@ -26,22 +27,54 @@
     background-color: $primary;
     border-color: $primary;
     color: $dark;
+    position: relative;
+
+    &:after {
+        content: "\f061";
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 300;
+        position: absolute;
+        right: 15px;
+        opacity: 0;
+        transition: .3s;
+    }
 
     &:hover,
     &:focus {
         padding-right: 2.5rem$imp;
+
+        &:after {
+            opacity: 1;
+        }
     }
 }
+
 @mixin make-secondary-button() {
     background-color: $secondary;
     border-color: $secondary;
     color: $dark;
+    position: relative;
+
+    &:after {
+        content: "\f061";
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 300;
+        position: absolute;
+        right: 15px;
+        opacity: 0;
+        transition: .3s;
+    }
 
     &:hover,
     &:focus {
         padding-right: 2.5rem$imp;
+
+        &:after {
+            opacity: 1;
+        }
     }
 }
+
 @mixin make-dark-button() {
     background-color: $dark;
     border-color: $dark;
@@ -53,6 +86,7 @@
         color: $dark
     }
 }
+
 @mixin make-white-button() {
     background-color: #fff;
     border-color: #fff;
@@ -77,6 +111,7 @@
         color: #fff;
     }
 }
+
 @mixin make-outline-dark-button() {
     background-color: #fff;
     border-color: $dark;
@@ -88,6 +123,7 @@
         color: #fff;
     }
 }
+
 @mixin make-outline-white-button() {
     background-color: $primary;
     border-color: #fff;
