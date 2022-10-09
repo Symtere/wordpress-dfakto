@@ -5,6 +5,8 @@ $blocks = [
     'slider',
     'datas-keys',
     'accordion',
+    'icon-text',
+    'testimonial',
 ];
 
 foreach ( $blocks as $block ) {
