@@ -82,7 +82,7 @@ function theme_display_menu_title( $items, $args )
     $menu = wp_get_nav_menu_object($args->menu);
     $menu_location = $args->theme_location;
     $display = function_exists('get_field') ? get_field('display_menu_title', $menu) : false;
-    $footer_locations = ['nav_footer_1','nav_footer_2','nav_footer_3'];
+    $footer_locations = ['nav_footer','nav_footer_1','nav_footer_2','nav_footer_3'];
 
     if ( $display ) {
         $items = '<li class="menu-nav-title">'. $menu->name .'</li>' . $items;

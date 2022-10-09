@@ -1,0 +1,56 @@
+.col-mt-neg {
+    margin-top: -250px;
+}
+
+.group-marquee .big-title {
+    transform: rotate(-5deg);
+}
+
+.group-gotc {
+    position: relative;
+
+    &:before {
+        content: url('/wp-content/themes/dfakto/assets/svg/parallaxe-shapes-duo-colors.svg');
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0;
+    }
+
+    &>div {
+        position: relative;
+    }
+}
+
+.group-ttd {
+    position: relative;
+
+    &:before {
+        content: url(/wp-content/themes/dfakto/assets/svg/shape-dot-white-bg.svg);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &>div {
+        position: relative;
+    }
+
+    .wp-block-video {
+        height: 100%;
+        position: relative;
+
+        &:after {
+            content: "";
+            background: linear-gradient(270deg, #072038 0%, rgba(7, 32, 56, 0) 100%);
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        [poster] {
+            height: 100%;
+        }
+    }
+}
