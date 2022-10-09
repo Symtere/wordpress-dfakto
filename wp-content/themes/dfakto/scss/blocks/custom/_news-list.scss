@@ -1,4 +1,59 @@
 .news-list {
+    .nci-categories {
+        margin-bottom: 20px;
+    }
+
+    .nci-category {
+        margin-right: 10px;
+        border: 1px solid #26C1D9;
+        border-radius: 5px;
+        padding: 6px 12px;
+        color: #26C1D9;
+        font-size: 14px;
+    }
+
+    .nci-title {
+        @include text-overflow-vertical(3);
+    }
+
+    .nci-excerpt {
+        @include text-overflow-vertical(5);
+    }
+
+    .news-card-item {
+        border: 1px solid #A0BDC0;
+        border-radius: 15px;
+        padding: 32px 24px;
+        height: 100%;
+        transition: .3s;
+
+        &:hover {
+            background: #F0FDFF;
+        }
+    }
+
+    .author-name {
+        font-size: 14px;
+        margin-left: 10px;
+        line-height: 20px;
+    }
+
+    .nci-link {
+        border: 1px solid #072038;
+        border-radius: 30px;
+        padding: 9px 16px;
+        color: #072038;
+        transition: 0.3s;
+
+        &:hover {
+            background: #072038;
+            color: #fff;
+        }
+
+        i {
+            font-size: 16px;
+        }
+    }
 
 }
 
