@@ -1,11 +1,11 @@
 @mixin sticky-header() {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(#000,.3);
+    // background-color: #fff;
+    // box-shadow: 0 0 10px rgba(#000, .3);
 }
 
 .site-header {
     // position: sticky;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -13,7 +13,7 @@
     z-index: $zindex-sticky;
     background-color: transparent;
     transition: .5s ease-in-out;
-    box-shadow: 0 0 10px rgba(#000,0);
+    box-shadow: 0 0 10px rgba(#000, 0);
 
     .has-header-bg & {
         @include sticky-header();
@@ -35,21 +35,36 @@
 }
 
 .main-nav {
-    padding: 0 80px;
+    padding: 0 60px;
     width: 100%;
     justify-content: space-between;
 
-    > li {
+    >li {
         padding-bottom: 0;
 
-        > a {
-            text-transform: uppercase;
+        &.menu-item-has-children {
+            >a {
+
+                &:hover {
+                    background: #F0FDFF;
+
+                }
+            }
+        }
+
+        >a {
+            font-size: 1rem;
+            border-radius: 25px;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
         }
 
         &.active {
             position: relative;
 
-            > .nav-link {
+            >.nav-link {
                 color: $header-main-nav-item-active-color;
                 font-weight: $header-main-nav-item-active-font-weight;
             }
@@ -86,9 +101,16 @@
     .dropdown-toggle {
 
         &:after {
-            //content: none;
-            vertical-align: .05em;
+            content: "\f107";
+            font-family: 'Font Awesome 6 Pro';
+            font-weight: 300;
+            vertical-align: 0.05em;
+            border: none;
+            position: relative;
+            left: 2px;
+            top: 2px;
         }
+
         &.show {
 
             &:after {
@@ -117,7 +139,7 @@
 
         li {
 
-            + li {
+            +li {
                 border-top: 1px solid $dropdown-border-color;
             }
 
@@ -130,6 +152,7 @@
             }
         }
     }
+
     .dropdown-item {
 
         &:hover,
@@ -162,6 +185,7 @@
         border-radius: 3px;
         transition: .25s ease-in-out;
     }
+
     &:before,
     &:after {
         display: block;
@@ -188,7 +212,4 @@
    Responsive
    ========================================================================== */
 
-@media (min-width: $screen-lg) {
-
-
-}
+@media (min-width: $screen-lg) {}
