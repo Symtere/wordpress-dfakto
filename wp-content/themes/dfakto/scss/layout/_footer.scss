@@ -2,43 +2,105 @@
     padding: 1rem 0 0;
     margin: 1.5rem 0 0;
     background: #fff;
-    box-shadow: 0 0 60px rgba(#000,.15);
+    box-shadow: 0 0 60px rgba(#000, .15);
+}
+
+.sup-footer {
+    padding: 4rem 0;
 }
 
 .sub-footer {
-    padding: 1rem 0;
-    font-size: rem(12px);
+    padding: 1.5rem 0;
+    font-size: rem(16px);
+    background-color: #F7FAFB;
 }
 
-.ft-copyright {
+.ft-copyright {}
 
+
+.ft-brand-desc {}
+
+.ftb-name {}
+
+.ftb-address {}
+
+.ftb-phone {}
+
+.ftb-email {}
+
+.menu-nav-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Outfit';
+    color: $blue-700;
+    margin-bottom: 1rem;
 }
 
 
-.ft-brand-desc {
-
+.ft-menu a {
+    font-size: 16px;
+    text-decoration: none;
 }
-.ftb-name {
 
+.ft-address {
+    white-space: break-spaces;
 }
-.ftb-address {
 
-}
-.ftb-phone {
+.ft-addr-phone {
+    margin-top: 20px;
 
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Outfit';
+    }
 }
-.ftb-email {
 
+.ft-rsx-scx a {
+    color: $black_700;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 100%;
+    font-size: 16px;
+    transition: .3s;
+
+    &:hover {
+        background: $black_700;
+        color: #fff;
+    }
 }
+
+
+.sf-links a {
+    text-decoration: none;
+    padding-left: 5px;
+    color: $dark;
+
+    &:before {
+        content: "-";
+        margin-right: 5px;
+    }
+}
+
 
 @media (max-width: $screen-md-max) {
 
     .sup-footer {
         text-align: center;
     }
+
     .sub-footer {
         text-align: center;
     }
+
     .ft-copyright {
         margin-bottom: .5rem;
         justify-content: center;
